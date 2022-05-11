@@ -70,7 +70,7 @@
 
       <div class="form-group">
           <label for="descripcion">Descripción</label>
-          <input type="descripcion" class="form-control" id="descripcion" name="descripcion" placeholder="Ingrese una descripción del producto" required>
+          <input type="text" class="form-control" id="descripcion" name="descripcion" placeholder="Ingrese una descripción del producto" required>
       </div>
 
       <div class="form-group">

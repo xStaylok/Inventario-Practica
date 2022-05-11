@@ -1,6 +1,6 @@
 <?php
 // Configuracion necesaria para acceder a la base de datos.
-function conn(){
+function con(){
 $hostname = "localhost";    
 $usuariodb = "root";
 $passworddb = "";

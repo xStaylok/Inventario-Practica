@@ -19,7 +19,7 @@
     echo "Los datos son los siguientes: <br>";
     echo "$nombre, $encargado, $fecha_elaboracion, $fecha_vencimiento, $area, $material, $cantidad, $codigo_barras, $precio, $marca, $descripcion y $estado";
 
-   $conectar=conn(); //ejecuta las conexiones a la base de datos
+   $conectar=con(); //ejecuta las conexiones a la base de datos
    $sql="INSERT INTO productos (nombre, encargado, fecha_elaboracion, fecha_vencimiento, area, material, cantidad, codigo_barras, precio, marca, descripcion, estado, activo) VALUES('$nombre', '$encargado', '$fecha_elaboracion', '$fecha_vencimiento', '$area', '$material', '$cantidad', '$codigo_barras', '$precio', '$marca', '$descripcion', '$estado', 1)";
    $resul = mysqli_query($conectar , $sql)or trigger_error("Query Failed! SQL- Error:  ".mysqli_error($conectar), E_USER_ERROR);
 

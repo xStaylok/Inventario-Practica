@@ -1,10 +1,10 @@
 <?php
 
 	require 'conexion.php';
-
+  $conectar=con();
 	$sql = "SELECT id, nombre, encargado, fecha_elaboracion, fecha_vencimiento, area, material, cantidad, codigo_barras, precio, marca, descripcion, estado  FROM productos WHERE activo=1";
-  //error aqui
 	$resul = mysqli_query($conectar , $sql);
+  
 
 
 ?>
@@ -53,7 +53,7 @@
             	</tr>
         	</thead>
         		<tbody>
-//error
+
         		<?php while($fila = $resul->fetch_assoc()){ ?>
         		
             		<tr>
@@ -69,7 +69,7 @@
                 		<td><?php echo $fila['marca']; ?></td>
                 		<td><?php echo $fila['descripcion']; ?></td>
                 		<td><?php echo $fila['estado']; ?></td>
-                		<td><?php echo $fila['id']; ?></td>
+                		<td><a href="editar.php?id=<?php echo $fila['id']; ?>" class="btn btn-warning">Editar</a> </td>
                 		<td><?php echo $fila['id']; ?></td>
 
             		</tr>
